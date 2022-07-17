@@ -1,0 +1,39 @@
+
+    <nav class="navbar navbar-expand-lg bgc navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand btn btn-outline ms-5" href="#">Trust<span class="a px-1 mx-1">a</span>Bro</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/home/about"><button class="btn btn-light">About</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/home/admin" *ngIf="showAdmin"><button class="btn btn-light">Admin</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/location/location"><button class="btn btn-light">Location-Module</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/vann"><button class="btn btn-light">Van-Module</button></a>
+              </li>
+              <li class="nav-item dropdown pe-5 me-2">
+                <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div *ngIf="isAdmin"><i class="fa-brands fa-app-store"></i></div>
+                  <div *ngIf="isUser"><i class="fa-solid fa-circle-user"></i></div>
+
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">{{ username }}</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li> <a class="nav-link"><button class="btn btn-info" (click)="onClick()">logOut</button></a></li>
+                </ul>
+              </li>
+
+            </ul>
+            
+          </div>
+        </div>
+      </nav>

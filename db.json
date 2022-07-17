@@ -1,0 +1,99 @@
+{
+  "van": [
+    {
+      "code": "ABC123",
+      "carName": "MALIK",
+      "brand": "yamahha",
+      "model": "777",
+      "year": "2022",
+      "color": "dark black",
+      "regno": "721218104015",
+      "id": 1
+    },
+    {
+      "code": "ASADD123",
+      "carName": "Politician",
+      "brand": "yamahha",
+      "model": "2333",
+      "year": "1800",
+      "color": "black",
+      "regno": "721218104015",
+      "id": 2
+    },
+    {
+      "code": "ASADD123",
+      "carName": "HariTamil",
+      "brand": "yamahha",
+      "model": "777",
+      "year": "2030",
+      "color": "white",
+      "regno": "721218104015",
+      "id": 3
+    },
+    {
+      "code": "ASADD123",
+      "carName": "priya",
+      "brand": "lambo",
+      "model": "666",
+      "year": "9090",
+      "color": "black",
+      "regno": "721218104015",
+      "id": 4
+    },
+    {
+      "code": "ASADD123",
+      "carName": "Prisha",
+      "brand": "yamahha",
+      "model": "2333",
+      "year": "1800",
+      "color": "pink",
+      "regno": "721218104015",
+      "id": 5
+    },
+    {
+      "code": "ASADD123",
+      "carName": "Homelander",
+      "brand": "dddd",
+      "model": "3333",
+      "year": "2022",
+      "color": "red",
+      "regno": "721218104015",
+      "id": 6
+    },
+    {
+      "code": "ABBB12121",
+      "carName": "SoldierBoy",
+      "brand": "dummy",
+      "model": "666",
+      "year": "9090",
+      "color": "pink",
+      "regno": "721218104015",
+      "id": 7
+    }
+  ],
+  "login": [
+    {
+      "username": "Admin",
+      "password": "Hari@thoughtbees1",
+      "role": "Admin",
+      "id": 1
+    },
+    {
+      "username": "Hariprasath.T",
+      "password": "Hari@thoughtbees1111",
+      "id": 2
+    },
+    {
+      "username": "Hariprasath",
+      "password": "Hari@thoughtbees12555",
+      "id": 3
+    }
+  ],
+  "location": [
+    {
+      "code": "ASADD123",
+      "location": "Eachanari",
+      "id": 1
+    }
+  ]
+}

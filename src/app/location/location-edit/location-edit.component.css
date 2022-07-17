@@ -1,0 +1,48 @@
+.parent {
+    background: -webkit-linear-gradient(to right, #fff, #076585);  
+    background: linear-gradient(to right, #fff, #076585); 
+    margin: 40px 0;
+    padding: 40px;
+    /* box-sizing: border-box; */
+    /* height: 100vh; */
+}
+
+.form-container {
+    /* margin: 8% auto; */
+    max-width: 500px;
+    
+    background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* margin-top: 200px; */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgb(13, 80, 95);
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+
+input.ng-invalid.ng-touched {
+    border: 5px solid red;
+}
+
+
+@media screen and (max-width : 576px) {
+    .form-container {
+        margin:0 15px;
+    }
+}
+
+

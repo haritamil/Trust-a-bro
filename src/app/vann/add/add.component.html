@@ -1,0 +1,60 @@
+<div class="container-fluid parent">
+    <div class="row d-flex justify-content-center h-100">
+        <div class="col form-container my-auto">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="code"><h5>Code:</h5></label>
+                    <input type="text" id="location" pInputText name="code" formControlName="code" placeholder="Enter Code">
+                    
+                </div>
+               
+
+                <div class="form-group">
+                    <label for="name"><h5>Name:</h5></label>
+                    <input type="text" id="name" pInputText name="carName" formControlName="carName" placeholder="Enter Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="model"><h5>Model:</h5></label>
+                    <input type="text" id="model" pInputText name="model" formControlName="model" placeholder="Enter Model">
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="year"><h5>Year:</h5></label>
+                            <input type="text" id="year" pInputText name="year" formControlName="year" placeholder="Enter Year" required>
+                        </div>
+        
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="color"><h5>Color:</h5></label>
+                            <input type="text" id="color" pInputText name="color" formControlName="color" placeholder="Enter Color" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="brand"><h5>Brand:</h5></label>
+                            <input type="text" id="brand" pInputText name="brand" formControlName="brand" placeholder="Enter Brand" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="regno"><h5>Reg no:</h5></label>
+                            <input type="text" id="regno" pInputText name="regno" formControlName="regno" placeholder="Enter Regno" required>
+                        </div>
+        
+                       
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success w-50 mt-4" [disabled]="!signupForm.valid">{{ action }}</button>
+                </div>   
+            </form>
+        </div>
+    </div>
+</div>
