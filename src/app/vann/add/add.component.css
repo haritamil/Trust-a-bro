@@ -1,0 +1,46 @@
+.parent {
+    /* height: 100vh; */
+    margin: 30px;
+    padding: 20px;
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-container {
+    /* margin: 8% auto; */
+    max-width: 500px;
+    background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* margin-top: 200px; */
+    padding: 50px;
+    border-radius: 15px;
+
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    
+}
+
+input.ng-invalid.ng-touched {
+    border: 5px solid red;
+}
+
+
+
+
+@media screen and (max-width : 576px) {
+    .form-container {
+        margin:0 15px;
+    }
+}

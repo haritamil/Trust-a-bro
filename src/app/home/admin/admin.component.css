@@ -1,0 +1,59 @@
+.parent {
+  
+    height: 90vh;
+}
+
+.form-container {
+    /* margin: 8% auto; */
+    max-width: 500px;
+    background: linear-gradient(to right,#66806A, #F5F5F5);
+    /* margin-top: 200px; */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgb(13, 80, 95);
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+.chapa {
+    color: #000;
+    text-decoration: none;
+  
+}
+
+
+@media screen and (max-width : 576px)  {
+    .parent{
+        padding: 30px;
+        height: 200vh;
+    }
+    .form-container {
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px),(max-width: 968px){
+    .parent {
+        padding: 30px;
+        height: 150vh;
+    }
+}
+

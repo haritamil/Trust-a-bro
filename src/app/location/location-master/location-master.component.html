@@ -1,0 +1,21 @@
+<div class="container-fluid parent">
+    <div class="row d-flex justify-content-center h-100">
+        <div class="col form-container my-auto">
+            <form (ngSubmit)="onSubmit()" #f="ngForm">
+                <div class="form-group">
+                    <label for="code"><h5>Code:</h5></label>
+                    <input type="text" id="code" pInputText #code="ngModel" name="code" pattern="[A-Z]{1,}" placeholder="Enter Code" ngModel required> 
+                    <p class="m-2" style="color: yellow;" *ngIf="!code.valid && code.touched">* Please add a Valid Code</p>
+                </div>
+                <div class="form-group">
+                    <label for="location"><h5>Location:</h5></label>
+                    <input type="text" style="text-transform: capitalize;" id="location" #location="ngModel" pInputText name="location" placeholder="Enter Location" ngModel required>
+                    <p class="m-2" style="color: yellow;" *ngIf="!location.valid && location.touched">* Please add a location</p>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success w-50 mt-3" [disabled]='!f.valid'>Save</button>
+                </div>   
+            </form> 
+        </div>
+    </div>
+</div>

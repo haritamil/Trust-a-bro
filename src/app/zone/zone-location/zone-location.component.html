@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+        
+        </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      
+      </div>
+    </div>
+</div>
+
+
+<div class="container-fluid parent">
+  <div class="row d-flex justify-content-center h-100">
+      <div class="col form-container my-auto">
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
+              <div class="form-group text-center">
+                  <label for="code"><h5>Zone</h5></label>
+                    <p-dropdown [options]="cities" name="selectedZone"  [(ngModel)]="selectedZone" optionLabel="name" [ngModelOptions]="{standalone: true}"></p-dropdown>
+              </div>
+              <div class="form-group text-center">
+                  <label for="location"><h5>Location</h5></label>
+                  <p-multiSelect [options]="locations"   name="selectedLocations" [(ngModel)]="selectedLocations" optionLabel="location" [ngModelOptions]="{standalone: true}"></p-multiSelect>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-success w-50 mt-3" [disabled]='!f.valid'>Save</button>
+              </div>   
+          </form> 
+      </div>
+  </div>
+</div>
