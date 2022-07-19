@@ -32,7 +32,9 @@
 .svgi {
     /* background-color: whitesmoke; */
     height: 40rem;
-    padding: 25px;
+    width: 40rem;
+    /* padding-left: 10%; */
+    
 }
 
 /* Carousal row background color */

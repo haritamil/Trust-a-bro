@@ -1,19 +1,23 @@
 <div class="container-fluid parent">
     <div class="row d-flex justify-content-center h-100">
         <div class="col form-container my-auto">
-            <form [formGroup]="passForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="changePassForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <label for="code"><h5>Name:</h5></label>
-                    <input type="text" id="username" pInputText name="username" formControlName="username" placeholder="Enter Username"> 
+                    <label for="user-name"><h5>Username</h5></label>
+                    <input type="text" id="user-name" pInputText name="user-name" formControlName="username" placeholder="Enter Username"> 
                     
                 </div>
+                <!-- <div class="form-group">
+                    <label for="e-pass"><h5>Existing Password</h5></label>
+                    <input type="text" id="e-pass" pInputText name="e-pass" formControlName="ePass" placeholder="Enter Existing Password"> 
+                    
+                </div> -->
                 <div class="form-group">
-                    <label for="location"><h5>Password:</h5></label>
-                    <input type="text"  id="Password" pInputText name="password" formControlName="password" placeholder="Enter Password">
+                    <label for="new-pass"><h5>New Password</h5></label>
+                    <input type="text"  id="new-pass" pInputText name="new-pass" formControlName="password" placeholder="Enter New Password">
                 </div>
                 <div class="text-center d-flex justify-content-around">
-                    <a class="chapa" routerLink="/changepass"><button class="btn btn-warning mt-3">change password?</button></a>
-                    <button type="submit" class="btn btn-success w-50 mt-3" [disabled]='!passForm.valid'>Login</button>
+                    <button type="submit" class="btn btn-success w-50 mt-3" [disabled]='!changePassForm.valid'>Update</button>
                 </div>   
             </form> 
         </div>

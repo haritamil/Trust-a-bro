@@ -22,13 +22,13 @@ export class UpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.editForm = new FormGroup({
-      code: new FormControl("", [Validators.required, Validators.pattern('[A-Z]{3,}[0-9]{3,}')] ),
+      code: new FormControl("", [Validators.required, Validators.pattern('[A-Z]{1,}[0-9]{1,}')] ),
       carName: new FormControl("", [Validators.required, Validators.pattern('^[^0-9]+$')]),
       brand: new FormControl("", [Validators.required, Validators.pattern('^[^0-9]+$')]),
       model: new FormControl("", [Validators.required, Validators.pattern('^[^A-Za-z]+$')]),
       year: new FormControl("", [Validators.required, Validators.pattern('^[^A-Za-z]+$'), Validators.minLength(4), Validators.min(2000), Validators.max(2050)]),
       color: new FormControl("", [Validators.required, Validators.pattern('^[^0-9]+$')]),
-      regno: new FormControl("", [Validators.required, Validators.pattern('^[^A-Za-z]+$'), Validators.minLength(8)])
+      regno: new FormControl("", [Validators.required, Validators.pattern('^[^A-Za-z]+$'), Validators.minLength(3)])
     });
     
     this.id = this.config.data.id;

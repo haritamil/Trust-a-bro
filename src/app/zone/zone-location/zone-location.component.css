@@ -1,11 +1,13 @@
 /* Dropdown */
 :host ::ng-deep .p-dropdown {
     min-width: 15rem;
+    width: 100%;
   }
 
 /* Multiselect */
 :host ::ng-deep .p-multiselect {
     min-width: 15rem;
+    width: 100%;
     
 }
 
@@ -49,7 +51,7 @@
     /* margin: 8% auto; */
     max-width: 500px;
     
-    background: linear-gradient(to right,#66806A, #F5F5F5);
+    background-color: #B4C6A6;
     /* margin-top: 200px; */
     padding: 50px;
     border-radius: 15px;

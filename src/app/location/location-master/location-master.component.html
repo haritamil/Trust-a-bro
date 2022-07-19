@@ -4,11 +4,7 @@
             <form (ngSubmit)="onSubmit()" #f="ngForm">
                 <div class="form-group">
                     <label for="code"><h5>Code:</h5></label>
-<<<<<<< HEAD
                     <input type="text" id="code" pInputText #code="ngModel" name="code" pattern="[A-Z]{1,}" placeholder="Enter Code" ngModel required> 
-=======
-                    <input type="text" id="code" pInputText #code="ngModel" name="code" pattern="[A-Z]{2,}[0-9]{3,}" placeholder="Enter Code" ngModel required> 
->>>>>>> 489ccb18e64f3ea5259f4a47146e1bc3168f2b9c
                     <p class="m-2" style="color: yellow;" *ngIf="!code.valid && code.touched">* Please add a Valid Code</p>
                 </div>
                 <div class="form-group">

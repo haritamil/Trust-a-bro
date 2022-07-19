@@ -1,13 +1,14 @@
 .parent {
-    background-color: #B4C6A6;
+    background-color: whitesmoke;
     height: 90vh;
 }
 
 .form-container {
-    /* margin: 8% auto; */
     max-width: 500px;
-    background: linear-gradient(to right,#FFF1AF, #238131);
-    /* margin-top: 200px; */
+ 
+
+    background-color: #B4C6A6;
+
     padding: 50px;
     border-radius: 15px;
     box-shadow: 2px 4px 10px rgb(13, 80, 95);
@@ -36,6 +37,11 @@ input.ng-invalid.ng-touched {
     color: #000;
     text-decoration: none;
   
+}
+
+.tbg {
+    background-color: #B4C6A6;
+    
 }
 
 

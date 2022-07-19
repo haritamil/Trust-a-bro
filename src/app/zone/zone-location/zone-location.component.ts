@@ -28,6 +28,11 @@ export class ZoneLocationComponent implements OnInit {
   selectedZone!: Zone;
   obj: object = {};
 
+  // Getting data from ZoneLocation.json
+  zoneLocations!:any[];
+
+  editGet!:any;
+
   locationUrl:string = 'http://localhost:3000/location';
   ZoneLocationUrl: string = 'http://localhost:3000/ZoneLocation';
 
@@ -41,40 +46,56 @@ export class ZoneLocationComponent implements OnInit {
       {name: 'Paris', code: 'PRS'}
   ];
 
-//   this.locations = [
-//     {location: 'New York', code: 'NY'},
-//     {location: 'Rome', code: 'RM'},
-//     {location: 'London', code: 'LDN'},
-//     {location: 'Istanbul', code: 'IST'},
-//     {location: 'Paris', code: 'PRS'}
-// ];
       this.crud.get(this.locationUrl).subscribe((res) => {
         this.locations = res;
       })
+
+     
 
    
    }
 
   ngOnInit(): void {
+   this.getData();
   }
 
-  onSubmit(){
-    this.zoneForm.value.selectedZone = this.selectedZone.name;
-    this.zoneForm.value.selectedLocations = this.selectedLocations;
-   
-    
-    this.obj={
-     [this.zoneForm.value.selectedZone] : this.selectedLocations
-    }
 
+  getData(){
+    this.crud.get(this.ZoneLocationUrl).subscribe((res) => {
+      this.zoneLocations = res;
+    
+      
+    })
+  }
+
+  
+  onSubmit(){
+    // this.zoneForm.value.selectedZone = this.selectedZone.name;
+    // this.zoneForm.value.selectedLocations = this.selectedLocations;
+    // this.obj={
+    //  [this.zoneForm.value.selectedZone] : this.selectedLocations
+    // }
+
+    // RESULT USING ABOVE METHOD
+    // {
+    //   "New York": [
+    //     {
+    //       "code": "RA",
+    //       "id": 2,
+    //       "location": "Ramanathapuram"
+    //     }
+    //   ],
+    //   "id": 1
+    // }
+
+
+    this.obj={
+      zone: this.selectedZone.name,
+      locations: this.selectedLocations
+     }
     this.crud.add(this.ZoneLocationUrl, this.obj).subscribe({
       next:() => {
-        this.crud.get(this.ZoneLocationUrl).subscribe((res) => {
-          console.log("get ");
-          console.log(res);
-          
-          
-        })
+        this.getData();
       }
     });
     
