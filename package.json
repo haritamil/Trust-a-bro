@@ -11,10 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
-<<<<<<< HEAD
     "@angular/cdk": "^13.3.0",
-=======
->>>>>>> 489ccb18e64f3ea5259f4a47146e1bc3168f2b9c
     "@angular/common": "~13.3.0",
     "@angular/compiler": "~13.3.0",
     "@angular/core": "~13.3.0",
@@ -29,11 +26,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.0",
     "primeicons": "^5.0.0",
-<<<<<<< HEAD
     "primeng": "^13.3.0",
-=======
-    "primeng": "^13.4.1",
->>>>>>> 489ccb18e64f3ea5259f4a47146e1bc3168f2b9c
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

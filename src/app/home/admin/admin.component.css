@@ -1,12 +1,12 @@
 .parent {
-  
+    background-color: #B4C6A6;
     height: 90vh;
 }
 
 .form-container {
     /* margin: 8% auto; */
     max-width: 500px;
-    background: linear-gradient(to right,#66806A, #F5F5F5);
+    background: linear-gradient(to right,#FFF1AF, #238131);
     /* margin-top: 200px; */
     padding: 50px;
     border-radius: 15px;
