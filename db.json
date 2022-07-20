@@ -1,14 +1,64 @@
 {
   "van": [
     {
-      "code": "AVC1",
-      "carName": "HariTamil",
-      "brand": "bugati",
-      "model": "666",
+      "code": "A1",
+      "carName": "Entourage",
+      "brand": "Hyundai",
+      "model": "111",
       "year": "2022",
       "color": "black",
-      "regno": "4545",
+      "regno": "1111",
       "id": 1
+    },
+    {
+      "code": "A2",
+      "carName": "Oasis",
+      "brand": "Izuzu",
+      "model": "112",
+      "year": "2022",
+      "color": "white",
+      "regno": "1112",
+      "id": 2
+    },
+    {
+      "code": "A3",
+      "carName": "Daily",
+      "brand": "Iveco",
+      "model": "113",
+      "year": "2022",
+      "color": "white",
+      "regno": "1113",
+      "id": 3
+    },
+    {
+      "code": "A4",
+      "carName": "Joice",
+      "brand": "Kia",
+      "model": "114",
+      "year": "2022",
+      "color": "red",
+      "regno": "1114",
+      "id": 4
+    },
+    {
+      "code": "B1",
+      "carName": "Xylo",
+      "brand": "Mahindra",
+      "model": "115",
+      "year": "2022",
+      "color": "blue",
+      "regno": "1115",
+      "id": 5
+    },
+    {
+      "code": "B5",
+      "carName": "S-cargo",
+      "brand": "Nissan",
+      "model": "212",
+      "year": "2022",
+      "color": "violet ",
+      "regno": "1116",
+      "id": 6
     }
   ],
   "login": [
@@ -42,8 +92,33 @@
     },
     {
       "code": "UK",
-      "location": "ukkadam",
-      "id": 3
+      "id": 3,
+      "location": "Ukkadam"
+    },
+    {
+      "code": "MA",
+      "id": 4,
+      "location": "Malumichampatti"
+    },
+    {
+      "code": "SU",
+      "id": 5,
+      "location": "Sundarapuram"
+    },
+    {
+      "code": "SI",
+      "id": 6,
+      "location": "Sidco"
+    },
+    {
+      "code": "LIC",
+      "location": "Lic colony",
+      "id": 7
+    },
+    {
+      "code": "NA",
+      "id": 8,
+      "location": "Nanjundapuram"
     }
   ],
   "ZoneLocation": [
@@ -94,6 +169,105 @@
         }
       ],
       "id": 3
+    },
+    {
+      "zone": "Paris",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        },
+        {
+          "code": "UK",
+          "location": "ukkadam",
+          "id": 3
+        }
+      ],
+      "id": 4
+    },
+    {
+      "zone": "Rome",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        },
+        {
+          "code": "UK",
+          "id": 3,
+          "location": "Ukkadam"
+        },
+        {
+          "code": "MA",
+          "id": 4,
+          "location": "Malumichampatti"
+        },
+        {
+          "code": "SI",
+          "id": 6,
+          "location": "Sidco"
+        },
+        {
+          "code": "SU",
+          "id": 5,
+          "location": "Sundarapuram"
+        },
+        {
+          "code": "LIC",
+          "location": "Lic colony",
+          "id": 7
+        },
+        {
+          "code": "NA",
+          "id": 8,
+          "location": "Nanjundapuram"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "zone": "Istanbul",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        },
+        {
+          "code": "UK",
+          "id": 3,
+          "location": "Ukkadam"
+        },
+        {
+          "code": "MA",
+          "id": 4,
+          "location": "Malumichampatti"
+        },
+        {
+          "code": "SU",
+          "id": 5,
+          "location": "Sundarapuram"
+        }
+      ],
+      "id": 6
     }
-  ]
+  ],
+  "ZoneVan": []
 }

@@ -18,13 +18,13 @@
   </div>
 </div>
 
-<div class="container table-responsive">
-    <table class="table">
+<div class="container d-flex justify-content-center table-responsive">
+    <table class="table table-bordered tb">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Zone</th>
-            <th scope="col">Locations</th>
+            <th scope="col" class="text-center">Locations</th>
          
           </tr>
         </thead>
@@ -35,7 +35,7 @@
             <td scope="row">{{ detail.zone }}</td>
             
             <div scope="row" class="d-inline-block" *ngFor="let d of detail.locations">
-                <td class="">{{d.location}}</td>
+                <td>{{d.location}}</td>
             </div>
         
             

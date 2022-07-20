@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  showAdmin!: boolean;
+  showAdmin!: any;
   // User || Admin check
-  isAdmin!: boolean;
-  isUser!: boolean;
+  isAdmin!: any;
+  isUser!: any;
 
   // Admin || User details
-  username!: string;
+  username!: any;
 
   // subscriptions
   adminSubscription!: Subscription;
@@ -25,11 +25,11 @@ export class NavComponent implements OnInit {
 
 
   constructor(private auth: AuthService, private router: Router) { 
+    
     this.adminSubscription = this.auth.onAdminLogInOut().subscribe((data) => {
       this.showAdmin = data.show;
       this.isAdmin = data.admin;
     })
-
     this.userSubscription = this.auth.onUserLogInOut().subscribe((data) => {
       this.isUser = data.user;
       
@@ -38,21 +38,27 @@ export class NavComponent implements OnInit {
     this.navSubscription = this.auth.getNavDetails().subscribe((data) => {
       this.username = data;
     })
+
+    
     
 
 
   }
-
   ngOnInit(): void {
-    
+
+    this.showAdmin = localStorage.getItem('showAdmin');
+    this.isAdmin = localStorage.getItem('isAdmin');
+    this.username = localStorage.getItem('name');
+    this.isUser = localStorage.getItem('isUser');
   }
+  
 
   onClick(){
     if(this.isAdmin){
-      this.auth.AdminLogInOut();
+      this.auth.AdminLogOut();
       this.router.navigate(['/home/about']);
     }else if(this.isUser){
-      this.auth.UserLogInOut();
+      this.auth.UserLogOut();
       this.router.navigate(['/home/about']);
     }
     

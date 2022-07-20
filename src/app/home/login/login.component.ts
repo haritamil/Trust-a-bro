@@ -33,10 +33,13 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.crud.get(this.apiUrl).subscribe((res) => {
        const admin = res.find((a: any) => {
+           
            return (a.username === this.loginForm.value.username && a.password === this.loginForm.value.password && a.role === 'Admin');
+           
       })
 
         const user = res.find((a: any) => {
+        
           return (a.username === this.loginForm.value.username && a.password === this.loginForm.value.password);
         })
 
@@ -45,11 +48,11 @@ export class LoginComponent implements OnInit {
       
 
       if(admin){
-        this.auth.AdminLogInOut();
+        this.auth.AdminLogIn();
         this.auth.navDetails(this.loginForm.value.username);
         this.router.navigate(['/home/admin'])
       }else if(user){
-        this.auth.UserLogInOut();
+        this.auth.UserLogIn();
         this.auth.navDetails(this.loginForm.value.username);
         this.router.navigate(['/location/location'])
       }else{

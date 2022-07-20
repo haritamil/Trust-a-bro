@@ -51,16 +51,39 @@ export class UpdateComponent implements OnInit {
  
 
   onSubmit(){
-    this.crud.update(this.apiUrl,this.id,this.editForm.value)
-      .subscribe({
-        next:(_res)=>{
-          this.ref.close();
-          
-        },
-        error:()=>{
-          alert("error in update...")
-        }
-      })
+    this.crud.get(this.apiUrl).subscribe({
+      next:(res)=>{
+        const available = res.find((a:any) => {
+          return a.regno === this.editForm.value.regno && a.carName === this.editForm.value.carName;
+           
+         });
+
+         if(!available){
+          this.crud.update(this.apiUrl,this.id,this.editForm.value)
+          .subscribe({
+            next:(_res)=>{
+              this.editForm.reset();
+              this.ref.close();
+              
+            },
+            error:()=>{
+              alert("error in update...")
+            }
+          }) 
+        }else {
+          alert("code already exits")
+         }
+      },
+      error:()=>{
+        alert("error...")
+      }
+      
+    });
+   
+    
+    
+    // 
+ 
   }
 
   

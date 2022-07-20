@@ -12,9 +12,9 @@ export class CanActGuardGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if(this.auth.isAdminAuthorised()){
+    if(localStorage.getItem('isAdmin')){
       return true;
-    }else if(this.auth.isUserAuthorised()){
+    }else if(localStorage.getItem('isUser')){
       return true;
     }else {
       this.router.navigate(['/home/login']);

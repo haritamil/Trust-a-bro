@@ -78,6 +78,15 @@ input.ng-invalid.ng-touched {
 }
 
 
+/* table */
+.tb {
+    background-color: #B4C6A6;
+    /* max-width: 600px; */
+    border-color: #626e58 ;
+    box-shadow: 2px 4px 8px rgb(13, 80, 95);
+    
+}
+
 @media screen and (max-width : 576px) {
     .form-container {
         margin:0 15px;

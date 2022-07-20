@@ -6,15 +6,15 @@ import { Observable, Subject } from 'rxjs';
 })
 export class AuthService {
   // guard authorisation
-  private loggedIn: boolean = false;
-  private adminIn: boolean = false;
+  private loggedIn!:any;
+  private adminIn!:any;
   // Admin || user check
-  private isAdmin: boolean = false;
-  private isUser: boolean = false;
+  private isAdmin!:any;
+  private isUser!:any;
   // navDetails
-  username!: string;
+  username!: any;
   // nav showadmin
-  private showAdmin: boolean = false;
+  private showAdmin!:any;
   // subjects
   private adminSubject = new Subject<any>();
   private userSubject = new Subject<any>();
@@ -24,10 +24,25 @@ export class AuthService {
 
 
 // Admin
-  AdminLogInOut(): void{
-    this.adminIn = !this.adminIn
-    this.showAdmin = !this.showAdmin;
-    this.isAdmin = !this.isAdmin;
+  AdminLogIn(): void{
+    localStorage.setItem('adminIn', 'true');
+    localStorage.setItem("showAdmin", "true");
+    localStorage.setItem("isAdmin", 'true');
+    this.adminIn = localStorage.getItem('adminIn');
+    this.showAdmin = localStorage.getItem('showAdmin');
+    this.isAdmin = localStorage.getItem('isAdmin');
+   
+    this.adminSubject.next({show:this.showAdmin, loged:this.adminIn, admin:this.isAdmin});
+  }
+
+  AdminLogOut(): void {
+    localStorage.removeItem('adminIn');
+    localStorage.removeItem("showAdmin");
+    localStorage.removeItem("isAdmin");
+    localStorage.removeItem('name');
+    this.adminIn = false;
+    this.showAdmin = false;
+    this.isAdmin = false;
     this.adminSubject.next({show:this.showAdmin, loged:this.adminIn, admin:this.isAdmin});
   }
 
@@ -36,9 +51,20 @@ export class AuthService {
   }
 
 // User
-  UserLogInOut(): void{
-    this.loggedIn = !this.loggedIn;
-    this.isUser = !this.isUser;
+  UserLogIn(): void{
+    localStorage.setItem('userIn', 'true');
+    localStorage.setItem("isUser", 'true');
+    this.loggedIn =  localStorage.getItem('UserIn');
+    this.isUser =  localStorage.getItem('isUser');
+    this.userSubject.next({loged: this.loggedIn, user:this.isUser});
+  }
+
+  UserLogOut(): void {
+    localStorage.removeItem('UserIn');
+    localStorage.removeItem("isUser");
+    localStorage.removeItem('name');
+    this.loggedIn = false;
+    this.isUser = false;
     this.userSubject.next({loged: this.loggedIn, user:this.isUser});
   }
 
@@ -57,7 +83,8 @@ export class AuthService {
 
 // Navbar user/admin details
   navDetails(user_name:string){
-      this.username = user_name;
+      localStorage.setItem('name', user_name);
+      this.username = localStorage.getItem('name');
       this.detailSubject.next(this.username);
   }
 

@@ -40,7 +40,7 @@ import { DynamicDialogConfig } from 'primeng/dynamicdialog';
       this.crud.get(this.apiUrl).subscribe({
         next:(res)=>{
           const available = res.find((a:any) => {
-            return a.code === this.signupForm.value.code;
+            return a.code === this.signupForm.value.code && a.carName === this.signupForm.value.carName;
              
            });
 

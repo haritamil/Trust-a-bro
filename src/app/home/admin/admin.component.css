@@ -39,8 +39,11 @@ input.ng-invalid.ng-touched {
   
 }
 
-.tbg {
+
+/* table */
+.tb {
     background-color: #B4C6A6;
+    
     
 }
 
