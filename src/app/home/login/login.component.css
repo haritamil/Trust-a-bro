@@ -1,8 +1,7 @@
 .parent {
     background-color: whitesmoke;
     
-    
-    height: 92vh;
+    height: 91vh;
 }
 
 .form-container {
@@ -36,11 +35,7 @@ input.ng-invalid.ng-touched {
     border: 5px solid red;
 }
 
-.chapa {
-    color: #000;
-    text-decoration: none;
-  
-}
+
 
 
 @media screen and (max-width : 576px) {

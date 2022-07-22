@@ -12,9 +12,9 @@ import { NavComponent } from './nav/nav.component';
 const routes: Routes = [{ path: '', component: HomeComponent },
 {path: 'login', component: LoginComponent},
 {path: 'admin', component: AdminComponent, canActivate:[CanActGuardGuard]},
-{path: 'changepass', component: ChangePassComponent},
+{path: 'changepass', component: ChangePassComponent, canActivate:[CanActGuardGuard]},
 {path: 'nav', component: NavComponent},
-{path: 'about', component:AboutComponent}]
+{path: 'about', component:AboutComponent, canActivate:[CanActGuardGuard]}]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

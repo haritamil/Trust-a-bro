@@ -1,58 +1,80 @@
-<div class="container-fluid parent">
-  
-    <div class="row d-flex justify-content-center h-100">
-        <div class="col-lg-6 col-md-12 col-sm-12 form-container my-auto g-3">
-           
-        <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
 
-            <div class="form-group">
-                <label for="username"><h5 class="fw-bold">Name:</h5></label>
-                <input type="text" id="username" pInputText name="username" formControlName="username" placeholder="Add Username"> 
-                
-            </div>
-            <div class="form-group">
-                <label for="Password"><h5 class="fw-bold">Password:</h5></label>
-                <input type="text"  id="Password" pInputText name="password" formControlName="password" placeholder="Add Password">
-            </div>
-            <div class="text-center">
-            
-                <button type="submit" class="btn btn-warning w-50 mt-3" [disabled]='!empForm.valid'>Add</button>
-            </div>   
-            
-        </form> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-4 ps-4" href="#">Admin Page</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-5">
+              <li class="nav-link me-5"><button type="button" class="btn btn-primary" (click)="showDialog()" icon="pi pi-info-circle"
+                label="Show">Add User</button></li>
+      
+            </ul>
+      
+          </div>
         </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12 my-auto">
-            <div class="container px-5">
-                <h3>User List</h3>
-            </div>
-            <div class="container px-5">
-                <table class="table tb">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">UserName</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                      </tr>
-                    </thead>
-                    <tbody *ngFor="let detail of userDetails">
-                      <tr *ngIf="detail.username != 'Admin'">
-                        <td scope="row">{{detail.id - 1 }}</td>
-                        <td scope="row">{{detail.username}}</td>
-                        <td scope="row"><button class="btn"><i
-                            class="fa-solid fa-pen-to-square"></i></button></td>
-                      <td scope="row"><button class="btn" (click)="onDelete(detail.id)" ><i class="fa-solid fa-trash"></i></button>
-                                        
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-            </div>
-        </div>
-    </div>
-   </div>
-
-
+      </nav>
+      
     
 
+    <p-dialog  [(visible)]="display" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" styleClass="adm" [header]="header" [baseZIndex]="10000">
+    
+            <div class="form-container mx-auto">
+
+                <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+    
+                    <div class="form-group">
+                        <label for="username">
+                            <h5 class="fw-bold">Name:</h5>
+                        </label>
+                        <input type="text" id="username" pInputText name="username" formControlName="username"
+                            placeholder="Username">
+    
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">
+                            <h5 class="fw-bold">Password:</h5>
+                        </label>
+                        <input type="text" id="Password" pInputText name="password" formControlName="password"
+                            placeholder="Password">
+                    </div>
+                    <div class="text-center">
+    
+                        <button type="submit" class="btn btn-warning w-50 mt-3" [disabled]='!empForm.valid'>Add</button>
+                    </div>
+    
+                </form>
+            </div>
+ 
+      
+    </p-dialog>
+
+
+    <div class="col-lg-6 col-md-12 col-sm-12 mx-auto py-5">
+        <div class="container px-5 ">
+            <h3>User List</h3>
+        </div>
+        <div class="container px-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="table-success" scope="col">#</th>
+                        <th class="table-success" scope="col">UserName</th>
+                        <th class="table-success" scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let detail of userDetails">
+                    <tr *ngIf="detail.username != 'Admin'">
+                        <td scope="row">{{detail.id - 1 }}</td>
+                        <td scope="row">{{detail.username}}</td>
+                        <td scope="row"><button class="btn" (click)="onDelete(detail.id)"><i
+                                    class="fa-solid fa-trash"></i></button>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>

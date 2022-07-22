@@ -42,9 +42,9 @@
 /* Form */
 
 .parent {
-    margin: 40px 0;
-    padding: 40px;
-    /* height: 100vh; */
+    margin: 30px;
+    padding: 20px;
+   
 }
 
 .form-container {
@@ -56,6 +56,7 @@
     padding: 50px;
     border-radius: 15px;
     box-shadow: 2px 4px 8px rgb(13, 80, 95);
+    
 
 }
 
@@ -80,12 +81,31 @@ input.ng-invalid.ng-touched {
 
 /* table */
 .tb {
-    background-color: #B4C6A6;
-    /* max-width: 600px; */
-    border-color: #626e58 ;
-    box-shadow: 2px 4px 8px rgb(13, 80, 95);
+    background-color: whitesmoke;
     
 }
+
+
+
+::ng-deep .zone .p-dialog-header{
+    background-color: #66806A;
+    color: #fff;
+    
+}      
+ 
+::ng-deep .zone .p-dialog-content {
+    background-color: whitesmoke;
+    padding: 30px 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 100px;
+  
+ 
+}
+::ng-deep .zone .p-dialog-header .p-dialog-header-icon {
+    color:whitesmoke;
+}
+
 
 @media screen and (max-width : 576px) {
     .form-container {

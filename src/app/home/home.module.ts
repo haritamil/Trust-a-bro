@@ -3,7 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
+// Primeng
 import { InputTextModule } from 'primeng/inputtext';
+import {DialogModule} from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
+
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LocationModule } from '../location/location.module';
 import { AdminComponent } from './admin/admin.component';
@@ -34,7 +39,10 @@ import { AboutComponent } from './about/about.component';
     ReactiveFormsModule,
     LocationModule,
     FieldsetModule,
-    FormsModule 
+    FormsModule,
+    DialogModule,
+    ButtonModule,
+    DropdownModule
   ],
   exports: [
     NavComponent

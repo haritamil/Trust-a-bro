@@ -13,11 +13,15 @@ export class AdminComponent implements OnInit {
   empForm!:FormGroup;
   userDetails:any = [];
   apiUrl = "http://localhost:3000/login";
+  display: boolean = false;
+  header: string = "Add username & password"
+
   constructor(private crud: DisplayService,private primengConfig: PrimeNGConfig) { 
 
   }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     this.empForm = new FormGroup({
       username: new FormControl('', Validators.required),
       password: new FormControl('', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{6,}')])
@@ -37,6 +41,11 @@ export class AdminComponent implements OnInit {
       
     })
   }
+
+  
+  showDialog() {
+    this.display = true;
+}
 
   onDelete(id:number){
     

@@ -56,10 +56,10 @@ export class NavComponent implements OnInit {
   onClick(){
     if(this.isAdmin){
       this.auth.AdminLogOut();
-      this.router.navigate(['/home/about']);
+      this.router.navigate(['/home/login']);
     }else if(this.isUser){
       this.auth.UserLogOut();
-      this.router.navigate(['/home/about']);
+      this.router.navigate(['/home/login']);
     }
     
     

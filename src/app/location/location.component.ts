@@ -26,7 +26,10 @@ export class LocationComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(LocationMasterComponent, {
         header: 'Add the details',
-        width: '70%'
+        width: '50%',
+        // contentStyle: {'overflow-x': 'hidden', 'overflow-y': 'hidden', 'background-color':'whitesmoke'},
+        styleClass: 'loc',
+      dismissableMask: true
     });
 
     ref.onClose.subscribe(() => {
@@ -38,7 +41,10 @@ export class LocationComponent implements OnInit {
 showEdit(Id:any) {
   const ref = this.dialogService.open(LocationEditComponent, {
       header: 'Edit the details',
-      width: '70%',
+      width: '50%',
+      // contentStyle: {'overflow-x': 'hidden', 'overflow-y': 'hidden', 'background-color':'whitesmoke'},
+      styleClass: 'loc',
+      dismissableMask: true,
       data: {
         id: Id
       }

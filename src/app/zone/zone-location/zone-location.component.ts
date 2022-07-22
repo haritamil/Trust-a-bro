@@ -21,6 +21,8 @@ interface Location {
 })
 export class ZoneLocationComponent implements OnInit {
 
+  header:string = "Link Zone and Locations"
+
   @ViewChild('f') zoneForm!: NgForm;
   cities: Zone[];
   locations: Location[] = [];
@@ -30,7 +32,7 @@ export class ZoneLocationComponent implements OnInit {
 
   // Getting data from ZoneLocation.json
   zoneLocations!:any[];
-
+  display: boolean =false;
   editGet!:any;
 
   locationUrl:string = 'http://localhost:3000/location';
@@ -67,6 +69,20 @@ export class ZoneLocationComponent implements OnInit {
       
     })
   }
+    
+  showDialog() {
+    this.display = true;
+}
+
+  onDelete(id:any){ 
+    // () => (this.details = this.details.filter((d:any) => d.id !== id))
+    this.crud.delete(`${this.ZoneLocationUrl}/${id}`).subscribe({
+      next:() => {
+        this.getData();
+      }
+    })
+  }
+
 
   
   onSubmit(){
@@ -93,11 +109,31 @@ export class ZoneLocationComponent implements OnInit {
       zone: this.selectedZone.name,
       locations: this.selectedLocations
      }
-    this.crud.add(this.ZoneLocationUrl, this.obj).subscribe({
-      next:() => {
-        this.getData();
+
+     this.crud.get(this.ZoneLocationUrl).subscribe({
+      next:(res) => {
+        const zone = res.find((a:any) => {
+          return a.zone === this.selectedZone.name;
+        })
+
+        if(!zone){
+          this.crud.add(this.ZoneLocationUrl, this.obj).subscribe({
+            next:() => {
+              this.getData();
+              this.display = false;
+              this.selectedLocations = [];
+              this.selectedZone = {
+                code:'',
+                name:''
+              }
+            }
+          });
+        }else {
+          alert('zone already exits');
+        }
       }
-    });
+     })
+    
     
     
     

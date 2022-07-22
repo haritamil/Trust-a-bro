@@ -47,6 +47,24 @@ input.ng-invalid.ng-touched {
     
 }
 
+::ng-deep .adm .p-dialog-header{
+    background-color: #66806A;
+    color: #fff;
+    
+}      
+ 
+::ng-deep .adm .p-dialog-content {
+    background-color: whitesmoke;
+    padding: 30px 20px;
+    overflow-x: hidden;
+ 
+}
+::ng-deep .adm .p-dialog-header .p-dialog-header-icon {
+    color:whitesmoke;
+} 
+
+
+
 
 @media screen and (max-width : 576px)  {
     .parent{

@@ -123,55 +123,7 @@
   ],
   "ZoneLocation": [
     {
-      "zone": "Rome",
-      "locations": [
-        {
-          "code": "EA",
-          "id": 1,
-          "location": "Eachanari"
-        },
-        {
-          "code": "RA",
-          "id": 2,
-          "location": "Ramanathapuram"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "zone": "Istanbul",
-      "locations": [
-        {
-          "code": "EA",
-          "id": 1,
-          "location": "Eachanari"
-        },
-        {
-          "code": "RA",
-          "id": 2,
-          "location": "Ramanathapuram"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "zone": "Paris",
-      "locations": [
-        {
-          "code": "RA",
-          "id": 2,
-          "location": "Ramanathapuram"
-        },
-        {
-          "code": "EA",
-          "id": 1,
-          "location": "Eachanari"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "zone": "Paris",
+      "zone": "New York",
       "locations": [
         {
           "code": "EA",
@@ -185,14 +137,66 @@
         },
         {
           "code": "UK",
-          "location": "ukkadam",
-          "id": 3
+          "id": 3,
+          "location": "Ukkadam"
         }
       ],
-      "id": 4
+      "id": 1
     },
     {
       "zone": "Rome",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "UK",
+          "id": 3,
+          "location": "Ukkadam"
+        },
+        {
+          "code": "MA",
+          "id": 4,
+          "location": "Malumichampatti"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "zone": "London",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        },
+        {
+          "code": "UK",
+          "id": 3,
+          "location": "Ukkadam"
+        },
+        {
+          "code": "SU",
+          "id": 5,
+          "location": "Sundarapuram"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "zone": "Istanbul",
       "locations": [
         {
           "code": "EA",
@@ -215,14 +219,45 @@
           "location": "Malumichampatti"
         },
         {
-          "code": "SI",
-          "id": 6,
-          "location": "Sidco"
+          "code": "SU",
+          "id": 5,
+          "location": "Sundarapuram"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "zone": "Paris",
+      "locations": [
+        {
+          "code": "EA",
+          "id": 1,
+          "location": "Eachanari"
+        },
+        {
+          "code": "RA",
+          "id": 2,
+          "location": "Ramanathapuram"
+        },
+        {
+          "code": "UK",
+          "id": 3,
+          "location": "Ukkadam"
+        },
+        {
+          "code": "MA",
+          "id": 4,
+          "location": "Malumichampatti"
         },
         {
           "code": "SU",
           "id": 5,
           "location": "Sundarapuram"
+        },
+        {
+          "code": "SI",
+          "id": 6,
+          "location": "Sidco"
         },
         {
           "code": "LIC",
@@ -236,37 +271,6 @@
         }
       ],
       "id": 5
-    },
-    {
-      "zone": "Istanbul",
-      "locations": [
-        {
-          "code": "EA",
-          "id": 1,
-          "location": "Eachanari"
-        },
-        {
-          "code": "RA",
-          "id": 2,
-          "location": "Ramanathapuram"
-        },
-        {
-          "code": "UK",
-          "id": 3,
-          "location": "Ukkadam"
-        },
-        {
-          "code": "MA",
-          "id": 4,
-          "location": "Malumichampatti"
-        },
-        {
-          "code": "SU",
-          "id": 5,
-          "location": "Sundarapuram"
-        }
-      ],
-      "id": 6
     }
   ],
   "ZoneVan": []

@@ -1,9 +1,8 @@
 .parent {
-    background: -webkit-linear-gradient(to right, #fff, #076585);  
-    background: linear-gradient(to right, #fff, #076585); 
+    background-color: whitesmoke;
     
-    margin: 40px 0;
-    padding: 40px;
+    margin: 30px;
+    padding: 20px 20px 0 20px;
     /* height: 100vh; */
 }
 
@@ -11,8 +10,7 @@
     /* margin: 8% auto; */
     max-width: 500px;
     
-    background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #B4C6A6;
     /* margin-top: 200px; */
     padding: 50px;
     border-radius: 15px;
@@ -37,6 +35,22 @@ input {
 input.ng-invalid.ng-touched {
     border: 5px solid red;
 }
+
+
+::ng-deep .loc .p-dialog-header{
+    background-color: #66806A;
+    color: #fff;
+    
+}      
+ 
+::ng-deep .loc .p-dialog-content {
+    background-color: whitesmoke;
+    overflow-x: hidden;
+ 
+}
+::ng-deep .loc .p-dialog-header .p-dialog-header-icon {
+    color:whitesmoke;
+} 
 
 
 @media screen and (max-width : 576px) {

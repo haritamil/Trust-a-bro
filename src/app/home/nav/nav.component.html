@@ -1,45 +1,46 @@
 
-    <nav class="navbar navbar-expand-lg bgc navbar-dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navv navbar-dark">
+        <!-- <div class="container-fluid"> -->
           <a class="navbar-brand btn btn-outline ms-5" href="#">Trust<span class="a px-1 mx-1">a</span>Bro</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupported" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupported">
+          <div class="collapse navbar-collapse custom" id="navbarSupported">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
               <li class="nav-item">
-                <a class="nav-link" routerLink="/home/about"><button class="btn btn-light">About</button></a>
+                <a class="nav-link pt-3 me-2 links" routerLink="/home/about" *ngIf="showAdmin || isUser">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/home/admin" *ngIf="showAdmin"><button class="btn btn-light">Admin</button></a>
+                <a class="nav-link pt-3 me-2 links " routerLink="/home/admin" *ngIf="showAdmin">Admin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/location/location"><button class="btn btn-light">Location-Module</button></a>
+                <a class="nav-link pt-3 me-2 links " routerLink="/location/location" *ngIf="showAdmin || isUser">Location</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/vann"><button class="btn btn-light border-primary">Van-Module</button></a>
+                <a class="nav-link pt-3 me-2 links " routerLink="/vann" *ngIf="showAdmin || isUser">Van</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/zone/zone-location"><button class="btn btn-light">Zone-L</button></a>
+                <a class="nav-link pt-3 me-2 links " routerLink="/zone/zone-location" *ngIf="showAdmin || isUser">Zone-L</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/zone/zone-van"><button class="btn btn-light">Zone-V</button></a>
-              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link pt-3 me-3" routerLink="/zone/zone-van" *ngIf="showAdmin || isUser">Zone-V</a>
+              </li> -->
               <li class="nav-item dropdown pe-5 me-2">
                 <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <div *ngIf="isAdmin"><i class="fa-brands fa-app-store"></i></div>
                   <div *ngIf="isUser"><i class="fa-solid fa-circle-user"></i></div>
 
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">{{ username }}</a></li>
+                <ul class="dropdown-menu dropdown-menu-end px-3" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-center" href="#">{{ username }}</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li> <a class="nav-link"><button class="btn btn-info" (click)="onClick()">logOut</button></a></li>
+                  <li> <a class="nav-link text-center chapa btn btn-outline-warning" routerLink="/home/changepass">Change Password?</a></li>
+                  <li> <a class="nav-link text-center"><button class="btn btn-outline-info" (click)="onClick()">logOut</button></a></li>
                 </ul>
               </li>
 
             </ul>
             
           </div>
-        </div>
+        <!-- </div> -->
       </nav>

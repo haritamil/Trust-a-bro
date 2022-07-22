@@ -29,7 +29,10 @@ export class VannComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddComponent, {
         header: 'Add the details',
-        width: '50%'
+        width: '50%',
+        // contentStyle: {'overflow-x': 'hidden', 'overflow-y': 'hidden', 'background-color':'whitesmoke'} ,
+        styleClass: 'van',
+        dismissableMask: true
     });
 
     ref.onClose.subscribe(() => {
@@ -42,6 +45,9 @@ showEdit(Id:any) {
   const ref = this.dialogService.open(UpdateComponent, {
       header: 'Edit the details',
       width: '50%',
+      // contentStyle: {'overflow-x': 'hidden', 'overflow-y': 'hidden', 'background-color':'whitesmoke'} ,
+      styleClass: 'van',
+      dismissableMask: true,
       data: {
         id: Id
       }

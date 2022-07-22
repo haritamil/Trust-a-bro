@@ -5,9 +5,12 @@ import { ZoneRoutingModule } from './zone-routing.module';
 import { ZoneComponent } from './zone.component';
 import { ZoneLocationComponent } from './zone-location/zone-location.component';
 import { ZoneVanComponent } from './zone-van/zone-van.component';
+import { FormsModule } from '@angular/forms';
+// Primeng
 import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
-import { FormsModule } from '@angular/forms';
+import {DialogModule} from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -22,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     ZoneRoutingModule,
     DropdownModule,
     MultiSelectModule,
-    FormsModule
+    FormsModule,  
+    DialogModule,
+    ButtonModule,
   ]
 })
 export class ZoneModule { }

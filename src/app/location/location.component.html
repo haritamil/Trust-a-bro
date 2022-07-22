@@ -1,31 +1,31 @@
-<div class="container-fluid">
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light h-100">
     <div class="container-fluid">
-      <a class="navbar-brand ms-3" href="#">Location Module</a>
+      <a class="navbar-brand ms-4 ps-3" href="#">Location Module</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-link"><button class="btn btn-primary me-3" (click)="show()">Add</button></li>
+        <ul class="navbar-nav ms-auto me-5">
+          <li class="nav-link"><button class="btn btn-primary me-5" (click)="show()">Add Location</button></li>
 
         </ul>
 
       </div>
     </div>
   </nav>
-</div>
 
-<div class="container mt-3">
-  <table class="table table-sm table-striped">
+
+<div class="container mt-5">
+  <table class="table table-striped">
     <thead class="text-center">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Code</th>
-        <th scope="col">Location</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
+        <th class="table-success" scope="col">#</th>
+        <th class="table-success" scope="col">Code</th>
+        <th class="table-success" scope="col">Location</th>
+        <th class="table-success" scope="col">Edit</th>
+        <th class="table-success" scope="col">Delete</th>
       </tr>
     </thead>
     <tbody class="text-center align-center">
@@ -33,7 +33,7 @@
         <td scope="row">{{ location.id }}</td>
         <td scope="row">{{ location.code }}</td>
         <td scope="row">{{ location.location }}</td>
-        <td scope="row"><button class="btn" (click)="showEdit(location.id)"><i
+        <td scope="row"><button class="btn" ngClass="loc-edit-dialog" (click)="showEdit(location.id)"><i
               class="fa-solid fa-pen-to-square"></i></button></td>
         <td scope="row"><button class="btn" (click)="onDelete(location.id)"><i class="fa-solid fa-trash"></i></button>
         </td>
